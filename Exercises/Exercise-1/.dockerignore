@@ -1,0 +1,13 @@
+# Python venvs
+.venv/
+venv/
+
+# Caches and artifacts
+__pycache__/
+.pytest_cache/
+downloads/
+
+# Git and editor cruft
+.git/
+.DS_Store
+*.swp

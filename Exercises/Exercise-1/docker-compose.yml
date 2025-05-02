@@ -1,12 +1,15 @@
 version: "3.9"
 services:
-  test:
-    image: "exercise-1"
-    volumes:
-      - .:/app
-    command: python3 -m pytest
   run:
-    image: "exercise-1"
+    build:
+      context: .         # ← this tells Compose “use the Dockerfile here”
     volumes:
       - .:/app
     command: python3 main.py
+
+  test:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    command: python3 -m pytest
